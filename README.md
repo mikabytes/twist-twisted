@@ -21,3 +21,7 @@ Are welcome, create a PR please.
 ## Support
 
 This is only tested on latest Chrome.
+
+## License
+
+ISC
