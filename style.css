@@ -93,6 +93,29 @@
   display: none;
 }
 
+.conversation article {
+  display: none !important;
+}
+
+.conversation aside {
+  padding: 0 !important;
+}
+
+.double_avatar {
+  height: 18px;
+  display: flex;
+}
+
+.double_avatar > .twist_avatar {
+  top: 0;
+}
+
+.conversation .twist_avatar {
+  width: 18px !important;
+  height: 18px !important;
+  border: none !important;
+}
+
 /* emoticons */
 img.emoji {
   width: 20px;
