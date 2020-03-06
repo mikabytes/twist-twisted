@@ -1,6 +1,6 @@
 # Twist Twisted
 
-This makes several improvements on twist.com. You can try it out quickly by going there and copy/pasting this in the console:
+This makes several improvements on twist.com. You can try it out quickly by going to https://twist.com and copy/pasting this in the console:
 
 ```javascript
 const script = document.createElement('script')
@@ -42,7 +42,7 @@ The better way is to install Tampermonkey or something similar and create a scri
 
 Contributions are welcome, create a PR please.
 
-An excellent way of developing locally is to use the script above put point it to a local server (such as `npx serve`). Then, make sure to add your local files to the "Sources" tab in Chrome inspector, and you will have live CSS edit!
+An excellent way of developing locally is to use the script above, point it to a local server (such as `npx serve`). Then, make sure to add your local files to the "Sources" tab in Chrome inspector. You will have live CSS edit!
 
 ## Support
 
