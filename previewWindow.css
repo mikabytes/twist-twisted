@@ -1,0 +1,4 @@
+/* The preview is cut off in bottom, because 100% doesn't take the navigation bar in account */
+.preview_window__content {
+  height: calc(100% - 60px) !important;
+}

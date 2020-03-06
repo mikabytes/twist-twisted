@@ -6,15 +6,15 @@
   padding: 10px 0px !important;
 }
 
-.thread.item:not(.unread) {
+.thread.item:not(.unread):not(.active) {
   background-color: rgba(242,245,245,0.8);
 }
 
-.archived .thread.item:not(.unread) {
+.archived .thread.item:not(.unread):not(.active) {
   background-color: rgba(242,245,245,0.8);
 }
 
-.archived .thread.item:not(.unread) h1 {
+.archived .thread.item:not(.unread):not(.active) h1 {
   color: var(--content-secondary);
   overflow-x: hidden;
 }
