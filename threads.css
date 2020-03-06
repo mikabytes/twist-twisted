@@ -1,0 +1,47 @@
+.thread.item .status_icons {
+  padding-top: 10px !important;
+}
+
+.thread.item .border_wrapper {
+  padding: 10px 0px !important;
+}
+
+.thread.item:not(.unread) {
+  background-color: rgba(242,245,245,0.8);
+}
+
+.archived .thread.item:not(.unread) {
+  background-color: rgba(242,245,245,0.8);
+}
+
+.archived .thread.item:not(.unread) h1 {
+  color: var(--content-secondary);
+  overflow-x: hidden;
+}
+
+.thread.item article {
+  display: none !important;
+}
+
+.thread.item section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.thread.item header {
+  width: 100%;
+  overflow-x: hidden;
+  flex: 1 1 auto;
+}
+
+.thread.item label {
+  flex: 0 0 125px;
+  margin-left: 5px;
+  display: block !important;
+  text-align: center;
+}
+
+.thread.item label .content {
+}
+

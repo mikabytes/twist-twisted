@@ -1,0 +1,7 @@
+/* Make smileys a little bigger, they look so blurred otherwise being shrunk from 72px */
+
+img.emoji {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}

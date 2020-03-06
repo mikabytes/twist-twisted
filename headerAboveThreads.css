@@ -1,0 +1,23 @@
+/* This changes so that the line "create new thread" disappears, and the button for creating
+ * new thread is instead put next to the three dots [...] */
+.list_header .popover__wrapper:last-child {
+  margin-right: 40px;
+}
+
+.center_column_button {
+  position: absolute;
+  right: 0;
+  background-color: transparent !important;
+}
+
+.center_column_button svg {
+  color: var(--twist-nav-bar);
+}
+
+.center_column_button  p {
+  display: none;
+}
+
+.center_column_button--wrapper {
+  border: none !important;
+}
