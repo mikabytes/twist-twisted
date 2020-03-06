@@ -82,15 +82,6 @@ function checkForChanges() {
   }
 }
 
-function removeLinkSummaries() {
-  document.querySelectorAll('.message_body a, .comments p > a').forEach(a => {
-    if (!a.isTreated) {
-      a.isTreated = true
-      a.textContent = `${a.href}`
-    }
-  })
-}
-
 function ctrlKey() {
   // let's find an add-button to push :)
   const button = document.querySelector(
