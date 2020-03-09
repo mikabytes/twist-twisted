@@ -82,11 +82,14 @@ function checkForChanges() {
   }
 }
 
-function removeLinkSummaries() {
+function betterLinkSummaries() {
   document.querySelectorAll('.message_body a, .comments p > a').forEach(a => {
     if (!a.isTreated) {
-      a.isTreated = true
-      a.textContent = `${a.href}`
+      const club = a.href.match(/clubhouse.*story\/(\d+)\//)
+      if (club) {
+        a.isTreated = true
+        a.textContent = `[ch${club[1]}]`
+      }
     }
   })
 }
@@ -111,7 +114,7 @@ function keydown(e) {
 
 setInterval(checkForThreads, 10)
 setInterval(checkForChanges, 1000)
-setInterval(removeLinkSummaries, 10)
+setInterval(betterLinkSummaries, 10)
 document.body.addEventListener('keydown', keydown)
 
 const datauri =
