@@ -1,0 +1,22 @@
+/* Make the commenters box lean */
+.comment_composer {
+  padding: 5px;
+}
+
+.comment_composer > header > .recipients {
+  padding: 0 !important;
+  height: 20px;
+  overflow: hidden;
+}
+
+.comment_composer {
+  min-height: 0px !important;
+}
+
+body .comment_composer .comment_composer__content {
+  min-height: 0px;
+}
+
+body .comment_composer .comment_composer__footer {
+  padding: 0;
+}
