@@ -16,7 +16,7 @@ function convertClubhouseLinks(fetch, token) {
       .querySelectorAll('.message_body a, .comments p > a')
       .forEach(async a => {
         if (!a.isTreated) {
-          const club = a.href.match(/clubhouse.*story\/(\d+)\//)
+          const club = a.href.match(/clubhouse.*story\/(\d+)(\/|$)/)
           if (club) {
             a.isTreated = true
             const storyId = club[1]
@@ -25,7 +25,7 @@ function convertClubhouseLinks(fetch, token) {
             Object.assign(a.style, {
               border: '1px solid #ddd',
               borderRadius: '1px',
-              padding: '1px 3px 1px 23px',
+              padding: '0px 3px 0px 23px',
               display: 'inline-block',
               background: '3px center / 15px 15px no-repeat',
               fontSize: '0.8em',
@@ -35,7 +35,7 @@ function convertClubhouseLinks(fetch, token) {
             const span2 = document.createElement('span')
             span1.textContent = storyId
             span1.style.color = '#a70210'
-            span2.style.color = '#777'
+            span2.style.color = 'rgba(0, 0, 0, 0.88)'
             a.appendChild(span1)
             a.appendChild(span2)
 
