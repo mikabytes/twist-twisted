@@ -95,15 +95,17 @@ function betterLinkSummaries() {
 }
 
 function ctrlKey() {
-  // let's find an add-button to push :)
-  const button = document.querySelector(
-    `.thread_composer__post_action, 
-    #close_thread_dragtoupload .reactist_modal_box__actions .button:not(.secondary)`
-  )
-
-  if (button) {
-    button.click()
-  }
+  setTimeout(() => {
+    // After sending a message, remain in the input box so we can send another message
+    const commentersField = document.querySelector(
+      '.collapsed_comment_composer > .input'
+    )
+    console.log(commentersField)
+    if (commentersField) {
+      console.log('yes')
+      commentersField.click()
+    }
+  }, 10)
 }
 
 function keydown(e) {
