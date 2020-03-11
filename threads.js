@@ -35,6 +35,7 @@ function convertClubhouseLinks(fetch, token) {
             const span2 = document.createElement('span')
             span1.textContent = storyId
             span1.style.color = '#a70210'
+            span1.style.fontWeight = 'bold'
             span2.style.color = 'rgba(0, 0, 0, 0.88)'
             a.appendChild(span1)
             a.appendChild(span2)
@@ -153,6 +154,19 @@ function ctrlKey() {
   }, 10)
 }
 
+function unblurPreviews() {
+  document.body.querySelectorAll('.attachment.__image').forEach(att => {
+    if (!att.isTreated) {
+      if (att.children[1].src) {
+        att.children[1].setAttribute('src', att.children[0].href)
+        att.children[1].removeAttribute('height')
+        att.children[1].style.maxHeight = '300px'
+        att.isTreated = true
+      }
+    }
+  })
+}
+
 function keydown(e) {
   if (e.key === 'Enter' && e.ctrlKey) {
     ctrlKey()
@@ -161,6 +175,7 @@ function keydown(e) {
 
 setInterval(checkForThreads, 10)
 setInterval(checkForChanges, 1000)
+setInterval(unblurPreviews, 10)
 document.body.addEventListener('keydown', keydown)
 
 const datauri =

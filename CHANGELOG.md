@@ -1,6 +1,10 @@
 # Changelog
 
-### 2020-03-11 Added Clubhouse badges!
+### 2020-03-11
+
+- Changed so that picture uploads aren't resized, because they get really ugly when blurred.
+
+- Added Clubhouse badges!
 
 ![Clubhouse Badges](docs/clubhouse-badges.png)
 
