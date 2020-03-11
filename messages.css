@@ -1,3 +1,4 @@
+/* remove attachments, they're just annoying */
 .attachment.__website {
   display: none;
 }
