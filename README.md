@@ -32,6 +32,9 @@ The better way is to install Tampermonkey or something similar and create a scri
 (function() {
     'use strict';
 
+    window.twisted = {
+        clubhouseToken: '5a687eb1-4134-49ed-c7d2-c3b9aea31eaa', // replace this with your clubhouse token
+    }
     const script = document.createElement('script');
     script.setAttribute('src', "https://mikabytes.github.io/twist-twisted/index.js");
     document.head.appendChild(script);
