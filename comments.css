@@ -1,0 +1,11 @@
+.comments .list .item {
+  margin-left: 8px;
+}
+
+.comment_composer__wrapper {
+  margin: 15px 15px 20px;
+}
+
+.collapsed_comment_composer {
+  margin: 20px 18px 30px;
+}

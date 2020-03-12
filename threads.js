@@ -12,47 +12,46 @@ function convertClubhouseLinks(fetch, token) {
   setInterval(run, 10)
 
   function run() {
-    document
-      .querySelectorAll('.message_body a, .comments p > a')
-      .forEach(async a => {
-        if (!a.isTreated) {
-          const club = a.href.match(/clubhouse.*story\/(\d+)(\/|$)/)
-          if (club) {
-            a.isTreated = true
-            const storyId = club[1]
-            a.textContent = ``
+    document.querySelectorAll('.mkdown a').forEach(async a => {
+      if (!a.isTreated) {
+        const club = a.href.match(/clubhouse.*story\/(\d+)(\/|$)/)
+        if (club) {
+          a.isTreated = true
+          const storyId = club[1]
+          a.textContent = ``
 
-            Object.assign(a.style, {
-              border: '1px solid #ddd',
-              borderRadius: '1px',
-              padding: '0px 3px 0px 23px',
-              display: 'inline-block',
-              background: '3px center / 15px 15px no-repeat',
-              fontSize: '0.8em',
-            })
+          Object.assign(a.style, {
+            border: '1px solid #ddd',
+            borderRadius: '1px',
+            padding: '0px 3px 0px 23px',
+            display: 'inline-block',
+            background: '3px center / 15px 15px no-repeat',
+            fontSize: '0.8em',
+          })
 
-            const span1 = document.createElement('span')
-            const span2 = document.createElement('span')
-            span1.textContent = storyId
-            span1.style.color = '#a70210'
-            span1.style.fontWeight = 'bold'
-            span2.style.color = 'rgba(0, 0, 0, 0.88)'
-            a.appendChild(span1)
-            a.appendChild(span2)
+          const span1 = document.createElement('span')
+          const span2 = document.createElement('span')
+          span1.textContent = storyId
+          span1.style.color = '#a70210'
+          span1.style.fontWeight = 'bold'
+          span2.style.color = 'rgba(0, 0, 0, 0.88)'
+          span2.innerHTML = `&nbsp;| ...`
+          a.appendChild(span1)
+          a.appendChild(span2)
 
-            const res = await fetch(
-              `https://api.clubhouse.io/api/v3/stories/${storyId}?token=${token}`
-            )
-            if (res.ok) {
-              const json = await res.json()
-              span2.innerHTML = `&nbsp;| ${json.name}`
-              a.style.backgroundImage = `url("${
-                json.completed ? completed : json.started ? started : unstarted
-              }")`
-            }
+          const res = await fetch(
+            `https://api.clubhouse.io/api/v3/stories/${storyId}?token=${token}`
+          )
+          if (res.ok) {
+            const json = await res.json()
+            span2.innerHTML = `&nbsp;| ${json.name}`
+            a.style.backgroundImage = `url("${
+              json.completed ? completed : json.started ? started : unstarted
+            }")`
           }
         }
-      })
+      }
+    })
   }
 }
 
