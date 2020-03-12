@@ -10,13 +10,28 @@
   background-color: rgba(242, 245, 245, 0.8);
 }
 
+[data-theme='dark'] .thread.item:not(.unread):not(.active) {
+  background-color: rgba(97, 97, 97, 0.8);
+}
+
 .archived .thread.item:not(.unread):not(.active) {
   background-color: rgba(242, 245, 245, 0.8);
+}
+
+[data-theme='dark'] .archived .thread.item:not(.unread):not(.active) {
+  background-color: rgba(117, 117, 117, 0.8);
 }
 
 .archived .thread.item:not(.unread):not(.active) h1 {
   color: var(--content-secondary);
   overflow-x: hidden;
+}
+
+[data-theme='dark']
+  .archived
+  .thread.item:not(.unread):not(.active)
+  .reactist_time {
+  color: var(--content-secondary);
 }
 
 .thread.item article {
@@ -40,4 +55,11 @@
   margin-left: 5px;
   display: block !important;
   text-align: center;
+}
+
+[data-theme='dark'] .thread.item .reactist_time {
+  color: var(--content-primary);
+}
+
+.thread.item label .content {
 }

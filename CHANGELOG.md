@@ -1,5 +1,9 @@
 # Changelog
 
+### 2020-03-12
+
+- Adjusted the background colors of threads so the app looks good in dark mode.
+
 ### 2020-03-11
 
 - Changed so that picture uploads aren't resized, because they get really ugly when blurred.
