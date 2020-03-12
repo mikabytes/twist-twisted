@@ -1,0 +1,6 @@
+/* There are already 3 buttons to add a channel.
+ * This removes the bottom one that takes up a lot of space and visual focus */
+
+.channels a.add.item {
+  display: none !important;
+}
