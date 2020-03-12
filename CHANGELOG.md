@@ -1,5 +1,9 @@
 # Changelog
 
+### 2020-03-12
+
+- Adjusted the background colors of threads so the app looks good in dark mode.
+
 ### 2020-03-11
 
 - Changed so that picture uploads aren't resized, because they get really ugly when blurred.
@@ -18,5 +22,3 @@
 ### 2020-03-09 Added proper links for Clubhouse. Removed the changing of links in general.
 
 ![Clubhouse Links](docs/clubhouse-links.png)
-
-### 2020-03-12 Adjusted the background colors of threads so the app looks good in dark mode.
