@@ -18,3 +18,5 @@
 ### 2020-03-09 Added proper links for Clubhouse. Removed the changing of links in general.
 
 ![Clubhouse Links](docs/clubhouse-links.png)
+
+### 2020-03-12 Adjusted the background colors of threads so the app looks good in dark mode.
