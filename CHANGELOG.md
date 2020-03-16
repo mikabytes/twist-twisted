@@ -1,5 +1,9 @@
 # Changelog
 
+### 2020-03-16
+
+- Changed so that images and previews use resizist so that EXIF is handled correctly. Max height set to 2000px, should be high enough quality for anyone.
+
 ### 2020-03-12
 
 - Adjusted the background colors of threads so the app looks good in dark mode.

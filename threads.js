@@ -157,13 +157,29 @@ function unblurPreviews() {
   document.body.querySelectorAll('.attachment.__image').forEach(att => {
     if (!att.isTreated) {
       if (att.children[1].src) {
-        att.children[1].setAttribute('src', att.children[0].href)
+        const newhref = `https://resizeist.doist.com/?maxheight=2000&url=${encodeURIComponent(
+          att.children[0].href
+        )}`
+        att.children[1].setAttribute('src', newhref)
         att.children[1].removeAttribute('height')
         att.children[1].style.maxHeight = '300px'
         att.isTreated = true
       }
     }
   })
+
+  const preview_image = document.body.querySelector(
+    '.preview_window .preview_image'
+  )
+  if (preview_image && !preview_image.isTreated) {
+    preview_image.isTreated = true
+    preview_image.setAttribute(
+      'src',
+      `https://resizeist.doist.com/?maxheight=2000&url=${encodeURIComponent(
+        preview_image.src
+      )}`
+    )
+  }
 }
 
 function keydown(e) {
