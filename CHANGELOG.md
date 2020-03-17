@@ -1,5 +1,9 @@
 # Changelog
 
+### 2020-03-17
+
+- Changed clubhouse icons to svgs and updated them so they look correct in dark mode also.
+
 ### 2020-03-16
 
 - Changed so that images and previews use resizist so that EXIF is handled correctly. Max height set to 2000px, should be high enough quality for anyone.
