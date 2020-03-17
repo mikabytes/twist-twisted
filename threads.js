@@ -1,14 +1,13 @@
 'use strict'
 
-const {clubhouseToken, fetch} = window.twisted || {}
+const {clubhouseToken} = window.twisted || {}
 delete window.twisted
 
-if (clubhouseToken && fetch) {
-  convertClubhouseLinks(fetch, clubhouseToken)
+if (clubhouseToken) {
+  convertClubhouseLinks(clubhouseToken)
 }
 
-function convertClubhouseLinks(fetch, token) {
-  console.log(fetch)
+function convertClubhouseLinks(token) {
   setInterval(run, 10)
 
   function run() {
