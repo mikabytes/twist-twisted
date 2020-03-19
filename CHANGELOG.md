@@ -1,5 +1,9 @@
 # Changelog
 
+### 2020-03-19
+
+- Speed up Clubhouse requests (streamline calls, 60 second cache)
+
 ### 2020-03-17
 
 - Changed clubhouse icons to svgs and updated them so they look correct in dark mode also.

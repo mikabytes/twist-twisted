@@ -4,10 +4,31 @@ const {clubhouseToken} = window.twisted || {}
 delete window.twisted
 
 if (clubhouseToken) {
-  convertClubhouseLinks(clubhouseToken)
+  convertClubhouseLinks()
 }
 
-function convertClubhouseLinks(token) {
+const fetchCache = {}
+function getStory(storyId) {
+  // 60 second cache
+  if (fetchCache[storyId] && new Date() - fetchCache[storyId].date < 60000) {
+    return fetchCache[storyId].promise
+  }
+
+  fetchCache[storyId] = {
+    date: new Date(),
+    promise: fetch(
+      `https://api.clubhouse.io/api/v3/stories/${storyId}?token=${clubhouseToken}`
+    ).then(res => {
+      if (res.ok) {
+        return res.json()
+      }
+    }),
+  }
+
+  return fetchCache[storyId].promise
+}
+
+function convertClubhouseLinks() {
   setInterval(run, 10)
 
   function run() {
@@ -38,11 +59,9 @@ function convertClubhouseLinks(token) {
           a.appendChild(span1)
           a.appendChild(span2)
 
-          const res = await fetch(
-            `https://api.clubhouse.io/api/v3/stories/${storyId}?token=${token}`
-          )
-          if (res.ok) {
-            const json = await res.json()
+          const json = await getStory(storyId)
+
+          if (json) {
             span2.innerHTML = `&nbsp;| ${json.name}`
             a.className = `${
               json.completed
