@@ -1,5 +1,9 @@
 # Changelog
 
+### 2020-03-20
+
+- Update positionn of create new thread icon and set the right color in dark mode.
+
 ### 2020-03-19
 
 - Speed up Clubhouse requests (streamline calls, 60 second cache)
