@@ -3,6 +3,8 @@
 ### 2020-03-20
 
 - Update position of create new thread icon and set the right color in dark mode.
+  ![Header list](docs/header-list.png)
+  ![Header list dark mode](docs/header-list-dark.png)
 
 ### 2020-03-19
 
