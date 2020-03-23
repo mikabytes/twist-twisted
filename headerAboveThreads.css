@@ -1,12 +1,18 @@
 /* This changes so that the line "create new thread" disappears, and the button for creating
  * new thread is instead put next to the three dots [...] */
-.list_header .popover__wrapper:last-child {
-  margin-right: 40px;
+
+.list_header {
+  margin-right: 25px;
+}
+
+.center_column_button--wrapper {
+  padding: 0;
 }
 
 .center_column_button {
   position: absolute;
-  right: 0;
+  top: 3px;
+  right: 10px;
   background-color: transparent !important;
 }
 
@@ -14,7 +20,12 @@
   color: var(--twist-nav-bar);
 }
 
-.center_column_button  p {
+[data-theme='dark'] .center_column_button svg,
+.reactist_popover__wrapper svg {
+  color: var(--content-primary);
+}
+
+.center_column_button p {
   display: none;
 }
 
