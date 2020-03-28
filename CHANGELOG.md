@@ -1,5 +1,10 @@
 # Changelog
 
+
+### 2020-03-28
+
+- Added support for Clubhouse Epic links
+
 ### 2020-03-20
 
 - Update position of create new thread icon and set the right color in dark mode.
