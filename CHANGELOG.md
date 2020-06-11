@@ -1,6 +1,11 @@
 # Changelog
 
 
+### 2020-06-11
+
+- Twist changed so that links are removed when attachments are showing. We are already hiding attachments, so that caused the links to disappear. Fixed by moving the links outside of attachemnts.
+
+
 ### 2020-03-28
 
 - Added support for Clubhouse Epic links
