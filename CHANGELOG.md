@@ -1,5 +1,9 @@
 # Changelog
 
+### 2020-09-31
+
+- Removed CSS that hides attachments as Twist has changed their logic and we don't catch all links anymore
+
 
 ### 2020-06-11
 
